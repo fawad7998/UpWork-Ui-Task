@@ -1,11 +1,11 @@
 'use client';
 
-import {ChevronDown,  Search, UserRound} from 'lucide-react';
+import {ChevronDown, Search, UserRound} from 'lucide-react';
 import Image from 'next/image';
 
 export default function Footer() {
  return (
-  <div className="w-full font-sans bg-white">
+  <div className="w-full font-sans ">
    <div className="py-12 px-6 text-center">
     <h2 className="text-3xl font-bold text-[#18470D] w-[364px] mb-2 mx-auto text-center">
      Subscribe now and be the first to know!
@@ -17,7 +17,7 @@ export default function Footer() {
       </div>
       <input
        type="text"
-       placeholder="Find a job, talent or service"
+       placeholder="First Name Last Name"
        className="flex-1 min-w-0 outline-none bg-transparent text-black placeholder-gray-500 text-xs sm:text-sm md:text-base"
       />
       <div className="flex-shrink-0 flex items-center pl-1 sm:pl-2 border-l border-gray-300 ml-1 sm:ml-2">
@@ -35,7 +35,7 @@ export default function Footer() {
        </div>
        <input
         type="text"
-        placeholder="Find a job, talent or service"
+        placeholder="Enter Your Email"
         className="flex-1 min-w-0 outline-none bg-transparent text-black placeholder-gray-500 text-xs sm:text-sm md:text-base"
        />
       </div>
@@ -53,7 +53,7 @@ export default function Footer() {
        </div>
        <input
         type="text"
-        placeholder="Find a job, talent or service"
+        placeholder="First Name Last Name"
         className="flex-1 min-w-0 outline-none bg-transparent text-black placeholder-gray-500 text-xs sm:text-sm md:text-base"
        />
        <div className="flex-shrink-0 flex items-center pl-1 sm:pl-2 border-l border-gray-300 ml-1 sm:ml-2">
@@ -65,33 +65,32 @@ export default function Footer() {
       </div>
      </div>
      <div className="w-full max-w-[80%] mx-auto md:max-w-xl mt-6 md:mt-auto">
-      <div className="relative flex items-center bg-white rounded-full px-2 sm:px-4 py-2 sm:py-3 shadow-lg">
+                     <div className="relative flex items-center bg-white rounded-full px-2 sm:px-4 py-2 sm:py-3 shadow-lg ">
        <div className="flex-shrink-0 flex items-center bg-black rounded-full p-1.5 sm:p-2 mr-2">
         <UserRound className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
        </div>
        <input
         type="text"
-        placeholder="Find a job, talent or service"
+        placeholder="Enter Your Email"
         className="flex-1 min-w-0 outline-none bg-transparent text-black placeholder-gray-500 text-xs sm:text-sm md:text-base"
        />
       </div>
      </div>
-
      <button className="bg-[#CBEC5E] text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition font-medium shadow-lg">
       Subscribe
      </button>
     </div>
    </div>
 
-   <div className="relative pt-16 pb-8">
+   <div className="relative pt-16 pb-2">
     <div className="absolute inset-0">
      <Image
       src="/images/footer.svg"
       alt="Footer background"
       width={1200}
       height={1200}
-      className="object-cover md:object-contain opacity-10" 
-      style={{filter: 'drop-shadow(0 0 25px rgba(0,0,0,0.5))'}}
+      className="object-cover md:object-contain opacity-10"
+      style={{filter: 'drop-shadow(0 0 25px rgba(0,0,0,0.9))'}}
      />
     </div>
 
