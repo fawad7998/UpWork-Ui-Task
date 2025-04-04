@@ -16,17 +16,13 @@ const DiscoverPage = () => {
  return (
   <Fragment>
    <div className="flex items-center justify-center m-[70px] space-x-2">
-    {/* Green Box */}
-             <div className="w-3 h-3 bg-[#CBEC5E] rounded-sm" />
-
-    {/* Text with Half Underline */}
+    <div className="w-3 h-3 bg-[#CBEC5E] rounded-sm" />
     <h2 className="relative text-3xl font-bold text-black">
      DISCOVER
-                 <span className="absolute right-0 bottom-0 w-2/5 h-1 bg-[#CBEC5E]"></span>
+     <span className="absolute right-0 bottom-0 w-2/5 h-1 bg-[#CBEC5E]"></span>
     </h2>
    </div>
    <div className="relative">
-    {/* Slider */}
     <Swiper
      modules={[Navigation]}
      navigation={{
@@ -44,12 +40,11 @@ const DiscoverPage = () => {
       768: {slidesPerView: 3},
       1024: {slidesPerView: 4},
      }}
-     className="!pb-16" // Add space for buttons below
+     className="!pb-16" 
     >
      {services.map((service) => (
       <SwiperSlide key={service.id}>
        <div className="space-y-3 mx-auto w-[223px]">
-        {/* Image Container */}
         <div className="relative h-[262px] w-full overflow-hidden">
          <Image
           src={service.image || '/placeholder.svg'}
@@ -60,7 +55,6 @@ const DiscoverPage = () => {
          />
         </div>
 
-        {/* Title & Icon Container */}
         <div className="bg-white rounded-4xl w-full flex justify-between items-center p-4 shadow-md">
          <h4 className="font-bold text-black">{service.title}</h4>
          <Link
@@ -82,7 +76,6 @@ const DiscoverPage = () => {
      ))}
     </Swiper>
 
-    {/* Navigation Buttons - Positioned below cards */}
     <div className="flex justify-center gap-4 ">
      <button
       ref={navigationPrevRef}
