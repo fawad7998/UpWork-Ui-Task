@@ -7,9 +7,9 @@ export default function Footer() {
  return (
   <div className="w-full font-sans ">
    <div className="py-12 px-6 text-center">
-             <h2 className="text-2xl md:text-3xl font-bold text-[#18470D] w-full md:w-[364px] mb-2 mx-auto text-center">
-                 Subscribe now and be the first to know!
-             </h2>
+    <h2 className="text-2xl md:text-3xl font-bold text-[#18470D] w-full md:w-[364px] mb-2 mx-auto text-center">
+     Subscribe now and be the first to know!
+    </h2>
     <div className="md:hidden flex flex-col items-center gap-4 px-4">
      <div className="relative flex items-center bg-white rounded-full px-2 sm:px-4 py-2 sm:py-3 shadow-lg">
       <div className="flex-shrink-0 flex items-center bg-black rounded-full p-1.5 sm:p-2 mr-2">
@@ -28,23 +28,43 @@ export default function Footer() {
       </div>
      </div>
 
-     <div className="w-full max-w-[80%] mx-auto md:max-w-xl mt-6 md:mt-auto">
-      <div className="relative flex items-center bg-white rounded-full px-2 sm:px-4 py-2 sm:py-3 shadow-lg">
+   
+      <div className="relative w-[260px] flex items-center bg-white rounded-full px-2 sm:px-4 py-2 sm:py-3 shadow-lg">
        <div className="flex-shrink-0 flex items-center bg-black rounded-full p-1.5 sm:p-2 mr-2">
         <UserRound className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
        </div>
        <input
         type="text"
         placeholder="Enter Your Email"
-        className="flex-1 min-w-0 outline-none bg-transparent text-black placeholder-gray-500 text-xs sm:text-sm md:text-base"
+        className="flex-1  outline-none bg-transparent text-black placeholder-gray-500 text-xs sm:text-sm md:text-base"
        />
       </div>
-     </div>
+   
      <button className="bg-[#CBEC5E] text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition font-medium shadow-lg">
       Subscribe
      </button>
     </div>
+   </div>
 
+   <div className="relative pt-16 pb-2">
+    <div className="absolute inset-0">
+     <div className="md:hidden h-full bg-white rounded-t-[40px] opacity-90" />
+     <div className="hidden md:flex items-center justify-center  h-full w-full max-w-[1200px] mx-auto">
+      <Image
+       src="/images/footer.svg"
+       alt="Footer background"
+       width={1200}
+       height={600}
+       className="object-contain opacity-10"
+       style={{
+        filter: 'drop-shadow(0 0 25px rgba(0,0,0,0.9))',
+        maxWidth: '100%',
+        height: 'auto',
+       }}
+      />
+     </div>
+    </div>
+    {/*  */}
     <div className="hidden md:flex max-w-4xl mx-auto gap-4 items-center justify-center">
      <div className="w-full max-w-[80%] mx-auto md:max-w-xl mt-6 md:mt-auto">
       <div className="relative flex items-center bg-white rounded-full px-2 sm:px-4 py-2 sm:py-3 shadow-lg">
@@ -65,7 +85,7 @@ export default function Footer() {
       </div>
      </div>
      <div className="w-full max-w-[80%] mx-auto md:max-w-xl mt-6 md:mt-auto">
-                     <div className="relative flex items-center bg-white rounded-full px-2 sm:px-4 py-2 sm:py-3 shadow-lg ">
+      <div className="relative flex items-center bg-white rounded-full px-2 sm:px-4 py-2 sm:py-3 shadow-lg ">
        <div className="flex-shrink-0 flex items-center bg-black rounded-full p-1.5 sm:p-2 mr-2">
         <UserRound className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
        </div>
@@ -73,48 +93,30 @@ export default function Footer() {
         type="text"
         placeholder="Enter Your Email"
         className="flex-1 min-w-0 outline-none bg-transparent text-black placeholder-gray-500 text-xs sm:text-sm md:text-base"
-                         />
+       />
       </div>
      </div>
      <button className="bg-[#CBEC5E] text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition font-medium shadow-lg">
       Subscribe
      </button>
     </div>
-   </div>
-
-   <div className="relative pt-16 pb-2">
-             <div className="absolute inset-0">
-                 {/* Mobile: White background (ONLY shows on screens < 768px) */}
-                 <div className="md:hidden h-full bg-white rounded-t-[40px] opacity-90" />
-
-                 {/* Desktop: Image with constrained size (shows on md+) */}
-                 <div className="hidden md:flex items-center justify-center h-full w-full max-w-[1200px] mx-auto">
-                     <Image
-                         src="/images/footer.svg"
-                         alt="Footer background"
-                         width={1200}
-                         height={600}  // Adjusted for better proportions
-                         className="object-contain opacity-10"
-                         style={{
-                             filter: 'drop-shadow(0 0 25px rgba(0,0,0,0.9))',
-                             maxWidth: '100%',
-                             height: 'auto'
-                         }}
-                     />
-                 </div>
-             </div>
-    <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
-     <div className="space-y-4">
+    {/*  */}
+    <div className="relative max-w-7xl mt-12 mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+     <div className="flex flex-col items-center space-y-4">
       <Image
        src="/images/mainFooter.svg"
        alt="Left group"
        width={160}
        height={160}
        priority
-                         className="block mx-auto object-cover rounded-3xl"
+       className="block mx-auto object-cover rounded-3xl"
       />
-      <p className="text-gray-400">support@Jobwhae.com</p>
-      <div className="flex items-center justify-center text-black hover:text-gray-300 px-4 py-1.5 border border-black rounded-full w-auto inline-flex">
+
+      <p className="text-black font-semibold text-center">
+       support@Jobwhae.com
+      </p>
+
+      <div className="flex items-center text-black  px-4 py-1.5 border border-black rounded-full w-auto">
        <Image
         src="/images/uk.svg"
         alt="UK Flag"
@@ -132,11 +134,11 @@ export default function Footer() {
       {title: 'Platform', links: ['Contracts', 'Advantages']},
       {title: 'Services', links: ['Top Talents']},
      ].map((section, i) => (
-      <div key={i} className="space-y-4">
-       <h4 className="font-bold text-lg">{section.title}</h4>
+      <div key={i} className="space-y-4 ">
+       <h4 className="font-semibold text-lg">{section.title}</h4>
        <ul className="space-y-3 text-gray-400">
         {section.links.map((link, j) => (
-         <li key={j} className="hover:text-white cursor-pointer">
+         <li key={j} className="text-black font-semibold cursor-pointer">
           {link}
          </li>
         ))}
@@ -151,13 +153,13 @@ export default function Footer() {
        © 2025 Jobwhae All rights reserved.
       </p>
       <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 order-1 md:order-2">
-       <a href="#" className="text-gray-500 hover:text-white text-sm">
+       <a href="#" className="text-gray-500  text-sm">
         Terms of service
        </a>
-       <a href="#" className="text-gray-500 hover:text-white text-sm">
+       <a href="#" className="text-gray-500 text-sm">
         Privacy Policy
        </a>
-       <a href="#" className="text-gray-500 hover:text-white text-sm">
+       <a href="#" className="text-gray-500 text-sm">
         Cookies
        </a>
       </div>
