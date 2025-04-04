@@ -7,9 +7,9 @@ export default function Footer() {
  return (
   <div className="w-full font-sans ">
    <div className="py-12 px-6 text-center">
-    <h2 className="text-3xl font-bold text-[#18470D] w-[364px] mb-2 mx-auto text-center">
-     Subscribe now and be the first to know!
-    </h2>
+             <h2 className="text-2xl md:text-3xl font-bold text-[#18470D] w-full md:w-[364px] mb-2 mx-auto text-center">
+                 Subscribe now and be the first to know!
+             </h2>
     <div className="md:hidden flex flex-col items-center gap-4 px-4">
      <div className="relative flex items-center bg-white rounded-full px-2 sm:px-4 py-2 sm:py-3 shadow-lg">
       <div className="flex-shrink-0 flex items-center bg-black rounded-full p-1.5 sm:p-2 mr-2">
@@ -73,7 +73,7 @@ export default function Footer() {
         type="text"
         placeholder="Enter Your Email"
         className="flex-1 min-w-0 outline-none bg-transparent text-black placeholder-gray-500 text-xs sm:text-sm md:text-base"
-       />
+                         />
       </div>
      </div>
      <button className="bg-[#CBEC5E] text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition font-medium shadow-lg">
@@ -83,17 +83,26 @@ export default function Footer() {
    </div>
 
    <div className="relative pt-16 pb-2">
-    <div className="absolute inset-0">
-     <Image
-      src="/images/footer.svg"
-      alt="Footer background"
-      width={1200}
-      height={1200}
-      className="object-cover md:object-contain opacity-10"
-      style={{filter: 'drop-shadow(0 0 25px rgba(0,0,0,0.9))'}}
-     />
-    </div>
+             <div className="absolute inset-0">
+                 {/* Mobile: White background (ONLY shows on screens < 768px) */}
+                 <div className="md:hidden h-full bg-white rounded-t-[40px] opacity-90" />
 
+                 {/* Desktop: Image with constrained size (shows on md+) */}
+                 <div className="hidden md:flex items-center justify-center h-full w-full max-w-[1200px] mx-auto">
+                     <Image
+                         src="/images/footer.svg"
+                         alt="Footer background"
+                         width={1200}
+                         height={600}  // Adjusted for better proportions
+                         className="object-contain opacity-10"
+                         style={{
+                             filter: 'drop-shadow(0 0 25px rgba(0,0,0,0.9))',
+                             maxWidth: '100%',
+                             height: 'auto'
+                         }}
+                     />
+                 </div>
+             </div>
     <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
      <div className="space-y-4">
       <Image
@@ -102,7 +111,7 @@ export default function Footer() {
        width={160}
        height={160}
        priority
-       className="object-cover rounded-3xl"
+                         className="block mx-auto object-cover rounded-3xl"
       />
       <p className="text-gray-400">support@Jobwhae.com</p>
       <div className="flex items-center justify-center text-black hover:text-gray-300 px-4 py-1.5 border border-black rounded-full w-auto inline-flex">

@@ -1,7 +1,10 @@
-import HeroSection from "@/shared/components/HeroSection";
+import { Fragment } from 'react';
+import Homelayout from './Home/page';
 
 export default function page() {
-  return <HeroSection />;
+ return (
+  <Fragment>
+   <Homelayout />
+  </Fragment>
+ );
 }
-
-

@@ -5,8 +5,8 @@ export default function LocaleLayout({children}) {
  return (
   <div className="max-w-6xl mx-auto text-center">
    <Navbar />
-         {children}
-         <Footer/>
+   {children}
+   <Footer />
   </div>
  );
 }
